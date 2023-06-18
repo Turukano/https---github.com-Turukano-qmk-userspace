@@ -288,7 +288,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     case LT(1,C(KC_PGDN)): //fett
      if (record->tap.count && record->event.pressed) {
-                tap_code16(S(KC_S));
+                tap_code16(C(KC_PGDN));
             } else if (record->event.pressed) {
                 tap_code16(C(S(KC_F)));
             }
@@ -304,7 +304,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     case LT(1,FN_FFXTAB): //underline
      if (record->tap.count && record->event.pressed) {
-                tap_code16(DE_SEMI);
+                tap_code16(FN_FFXTAB);
             } else if (record->event.pressed) {
                 tap_code16(C(S(KC_U)));
             }

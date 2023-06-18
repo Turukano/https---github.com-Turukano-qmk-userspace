@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NAV] = LAYOUT( 
     KC_BRID,         KC_BRIU,      KC_VOLD,      KC_VOLU,        KC_MUTE,                                KC_PGUP,      KC_BSPC,      KC_UP,        KC_DEL,       KC_INS,
     KC_LCTL,         KC_LSFT,      KC_LGUI,      KC_LALT,        _______,                               KC_PGDN,      KC_LEFT,      KC_DOWN,      KC_RGHT,      KC_F5,
-    _______,        _______,      _______,      FN_ZOOMOUT,     FN_ZOOMIN,                            FN_FFRECOV,      C(KC_PGUP),      LT(1,FN_FFXTAB),   LT(1,C(KC_PGDN)),      LT(1,KC_NO),
+    _______,        _______,      _______,      FN_ZOOMOUT,     FN_ZOOMIN,                   FN_FFRECOV,      C(KC_PGUP),      LT(1,FN_FFXTAB),   LT(1,C(KC_PGDN)),      LT(1,KC_NO),
                          UNNAV,          UNNAV,      _______,     FN_FFGOBACK,    FN_FFGOFORTH,          _______ ),
 
   [NUM] = LAYOUT( 
