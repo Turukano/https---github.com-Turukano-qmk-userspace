@@ -30,7 +30,7 @@ enum combos {
   SELLINEF,
   SELLINE,
   NUMCOMBO,
-  NUMCOMBO2
+  NUMCOMBO2,
   SWAP,
   FTWO,
   APO,

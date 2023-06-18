@@ -29,8 +29,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //vielleicht del wieder in BSPC ändern?
   [NAV] = LAYOUT( 
     KC_BRID,         KC_BRIU,      KC_VOLD,      KC_VOLU,        KC_MUTE,                                KC_PGUP,      KC_BSPC,      KC_UP,        KC_DEL,       KC_INS,
-    KC_LCTL,         KC_LSFT,      KC_LGUI,      KC_LALT,        MO(FFOX),                               KC_PGDN,      KC_LEFT,      KC_DOWN,      KC_RGHT,      KC_F5,
-    MO(FFOX),        _______,      _______,      FN_ZOOMOUT,     FN_ZOOMIN,                            FN_FFRECOV,      C(KC_PGUP),      FN_FFXTAB,   C(KC_PGDN),      FN_FFXTAB,
+    KC_LCTL,         KC_LSFT,      KC_LGUI,      KC_LALT,        _______,                               KC_PGDN,      KC_LEFT,      KC_DOWN,      KC_RGHT,      KC_F5,
+    _______,        _______,      _______,      FN_ZOOMOUT,     FN_ZOOMIN,                            FN_FFRECOV,      C(KC_PGUP),      FN_FFXTAB,   C(KC_PGDN),      FN_FFXTAB,
                          UNNAV,          UNNAV,      _______,     FN_FFGOBACK,    FN_FFGOFORTH,          _______ ),
 
   [NUM] = LAYOUT( 
