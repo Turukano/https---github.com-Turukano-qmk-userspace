@@ -16,12 +16,7 @@ typedef struct {
 } td_tap_t;
 
 enum {
-    KQ,
     NAVNUM,
-    COMMQ,
-    VEXCL,
-    ESZET,
-    SHIKQ,
     STARPIPEPM,
     YMINS,
     ADIAAT,
@@ -76,40 +71,6 @@ void navnum_res(tap_dance_state_t *state, void *user_data) {
     xtap_state.state = TD_NONE;
 }
 
-void vexcl(tap_dance_state_t *state, void *user_data) {
-if (state->count == 1) {
-  SEND_STRING ("v");
-  reset_tap_dance (state); }
-else if (state->count == 2) {
-    SEND_STRING(SS_LSFT(SS_TAP(X_1))); }
-}
-
-void commq(tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-  SEND_STRING (",");
-  reset_tap_dance (state); }
-else if (state->count == 2) {
-    SEND_STRING(SS_LSFT(SS_TAP(X_MINS)));}
-}
-
-void eszet(tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-  SEND_STRING ("s");
-  reset_tap_dance (state); }
-    else if (state->count == 2) {
-  SEND_STRING ("ss");
-  reset_tap_dance (state); }
-else if (state->count == 3) {
-    SEND_STRING(SS_TAP(X_MINS));}
-}
-
-void shikq(tap_dance_state_t *state, void *user_data) {
-    if (state->count == 1) {
-  SEND_STRING(SS_LSFT(SS_TAP(X_K)));
-  reset_tap_dance (state); }
-else if (state->count == 2) {
-    SEND_STRING(SS_LSFT(SS_TAP(X_Q)));}
-}
 
 void starpipepm(tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
@@ -191,11 +152,6 @@ void saveas(tap_dance_state_t *state, void *user_data) {
 
 tap_dance_action_t tap_dance_actions[] = {
     [NAVNUM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, navnum, navnum_res),
-    [KQ] = ACTION_TAP_DANCE_DOUBLE(KC_K, KC_Q),
-    [SHIKQ] = ACTION_TAP_DANCE_FN(shikq),
-    [VEXCL] = ACTION_TAP_DANCE_FN(vexcl),
-    [COMMQ] = ACTION_TAP_DANCE_FN(commq),
-    [ESZET] = ACTION_TAP_DANCE_FN(eszet),
     [STARPIPEPM] = ACTION_TAP_DANCE_FN(starpipepm),
     [YMINS] = ACTION_TAP_DANCE_DOUBLE(KC_Z, KC_SLSH),
     [ADIAAT] = ACTION_TAP_DANCE_FN(adiaat),

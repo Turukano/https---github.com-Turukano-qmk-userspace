@@ -250,7 +250,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
      if (record->tap.count && record->event.pressed) {
                 tap_code16(KC_G);
             } else if (record->event.pressed) {
-                tap_code16(KC_Q); // Intercept hold function to send Ctrl-C
+                tap_code16(KC_Q);
             }
             return false;
 
@@ -258,7 +258,55 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
      if (record->tap.count && record->event.pressed) {
                 tap_code16(S(KC_G));
             } else if (record->event.pressed) {
-                tap_code16(S(KC_Q)); // Intercept hold function to send Ctrl-C
+                tap_code16(S(KC_Q));
+            }
+            return false;
+
+    case LT(0,KC_S):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_S);
+            } else if (record->event.pressed) {
+                tap_code16(DE_SS); 
+            }
+            return false;
+
+    case LT(0,KC_COMM):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_COMM);
+            } else if (record->event.pressed) {
+                tap_code16(DE_QUES); 
+            }
+            return false;
+
+    case LT(0,KC_V):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_V);
+            } else if (record->event.pressed) {
+                tap_code16(DE_EXLM); 
+            }
+            return false;
+
+    case LT(1,S(KC_S)):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(S(KC_S));
+            } else if (record->event.pressed) {
+                tap_code16(C(S(KC_S)));
+            }
+            return false;
+
+    case LT(1,S(KC_K)):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(S(KC_K));
+            } else if (record->event.pressed) {
+                tap_code16(C(S(KC_K)));
+            }
+            return false;
+
+    case LT(1,DE_SEMI):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(DE_SEMI);
+            } else if (record->event.pressed) {
+                tap_code16(C(S(KC_U)));
             }
             return false;
 
