@@ -30,6 +30,7 @@ enum combos {
   SELLINEF,
   SELLINE,
   NUMCOMBO,
+  NUMCOMBO2
   SWAP,
   FTWO,
   APO,
@@ -70,6 +71,7 @@ const uint16_t PROGMEM ctab[] = {KC_LEFT, KC_DOWN, KC_RGHT, KC_F5, COMBO_END};
 const uint16_t PROGMEM sellineb[] = {KC_LEFT, KC_DOWN, COMBO_END};
 const uint16_t PROGMEM sellinef[] = {KC_DOWN, KC_RGHT, COMBO_END};
 const uint16_t PROGMEM numcombo[] = {LT(STRG,KC_C), MO(SHIF), COMBO_END};
+const uint16_t PROGMEM numcombo2[] = {LT(STRG,KC_C), MO(NAV), COMBO_END};
 const uint16_t PROGMEM swap[] = {LT(0,KC_N),   LT(0,KC_R),  TD(ESZET), COMBO_END};
 const uint16_t PROGMEM ftwo[] = {KC_LSFT,      KC_LGUI, COMBO_END};
 const uint16_t PROGMEM apo[] = {LT(0,KC_A),     LT(0,KC_X), COMBO_END};
@@ -108,6 +110,7 @@ combo_t key_combos[] = {
     [SELLINEF] = COMBO(sellinef, S(KC_END)), //funktioniert nicht
     [SELLINE] = COMBO(selline, SEL_LINE),
     [NUMCOMBO] = COMBO(numcombo, MO(NUM)),
+    [NUMCOMBO2] = COMBO(numcombo2, MO(NUM)),
     [SWAP] = COMBO(swap, SW_AP),
     [FTWO] = COMBO(ftwo, KC_F2),
     [APO] = COMBO(apo, S(KC_NUHS)),

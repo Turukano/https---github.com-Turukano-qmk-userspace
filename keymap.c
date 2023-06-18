@@ -3,9 +3,7 @@ enum layer_names {
     SHIF,
     NAV,
     NUM,
-    STRG,
-    FFOX,
-    BLANKO
+    STRG
 };
 
 #include QMK_KEYBOARD_H
@@ -32,13 +30,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NAV] = LAYOUT( 
     KC_BRID,         KC_BRIU,      KC_VOLD,      KC_VOLU,        KC_MUTE,                                KC_PGUP,      KC_BSPC,      KC_UP,        KC_DEL,       KC_INS,
     KC_LCTL,         KC_LSFT,      KC_LGUI,      KC_LALT,        MO(FFOX),                               KC_PGDN,      KC_LEFT,      KC_DOWN,      KC_RGHT,      KC_F5,
-    MO(FFOX),        _______,      _______,      FN_ZOOMOUT,     FN_ZOOMIN,             FN_FFRECOV,      FN_FFXTAB,      _______,      _______,      _______,
+    MO(FFOX),        _______,      _______,      FN_ZOOMOUT,     FN_ZOOMIN,                            FN_FFRECOV,      C(KC_PGUP),      FN_FFXTAB,   C(KC_PGDN),      FN_FFXTAB,
                          UNNAV,          UNNAV,      _______,     FN_FFGOBACK,    FN_FFGOFORTH,          _______ ),
 
   [NUM] = LAYOUT( 
     _______,         _______,      _______,      _______,        _______,                             TD(PLUSIST),   KC_7,         KC_8,         KC_9,         TD(EURDOLLPARA),
     _______,         KC_1,         KC_2,         KC_3,           _______,                           TD(STARPIPEPM), KC_4,         KC_5,         KC_6,         KC_0,
-    _______,         _______,      _______,      _______,        _______,        DE_MINS,      KC_1,         KC_2,         KC_3,         TD(PERDEGTILD),
+    _______,         _______,      _______,      _______,        _______,                              DE_MINS,      KC_1,         KC_2,         KC_3,         TD(PERDEGTILD),
          UNNUM,          UNNUM,        KC_DOT,      KC_BSPC,    KC_SPC,       TD(ENTIST)   ),
 //Zahlen überarbeiten. Erstens will ich besser ran kommen und zweitens will ich da noch mehr machen, als nur Zahlen. Dot und Klammern müssen verfügbar sein, aber auch Arrows eigentlich
 
@@ -48,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     FN_SEARCH,       _______,      _______,      _______,        _______,         FN_REDO,      FN_UNDO,      _______,      FN_STREAM,    FN_PROJECT,
        _______,        _______,      _______,     C(KC_BSPC), _______,      C(KC_ENTER) ),
 //word kursiv etc fehlen noch
-  [FFOX] = LAYOUT( 
+ /* [FFOX] = LAYOUT( 
     _______,         _______,      _______,      _______,        _______,                         _______,      FN_FFGOBACK,  FN_FFNTAB,    FN_FFGOFORTH, _______,
     _______,         _______,      _______,      _______,        _______,                             _______,      FN_FFLEFT,    FN_FFXTAB,    FN_FFRIGHT,   _______,
     _______,         _______,      _______,      _______,        _______,        _______,      _______,      FN_FFRECOV,   _______,      _______,
@@ -58,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,         _______,      _______,      _______,        _______,                         _______,      _______,      _______,      _______,      _______,
     _______,         _______,      _______,      _______,        _______,                         _______,      _______,      _______,      _______,      _______,
     _______,         _______,      _______,      _______,        _______,                         _______,      _______,      _______,      _______,      _______,
-                                                _______,    _______,      _______,      _______,      _______,      _______ ),
+                                                _______,    _______,      _______,      _______,      _______,      _______ ),*/
 };
 
 

@@ -184,10 +184,10 @@
 #define FN_FFLEFT C(S(KC_TAB)) //AutoHotKey #IfWinActive, Firefox Left::^+Tab
 #define FN_FFRIGHT C(KC_TAB) //AutHotKey #IfWinActive, Firefox Right::^Tab
 #define FN_FFNTAB C(KC_T) //alternative: Hold L
-#define FN_FFXTAB C(KC_F4) //
-#define FN_FFGOBACK A(KC_LEFT) //
-#define FN_FFGOFORTH A(KC_RGHT) //
-#define FN_FFRECOV C(S(KC_T)) //
+#define FN_FFXTAB C(KC_F4) //Same es undo
+#define FN_FFGOBACK KC_BSPC //BSPC Taste (Also Nav in VSCode)
+#define FN_FFGOFORTH S(KC_BSPC) //SPC Taste (Also Nav in VSCode)
+#define FN_FFRECOV C(S(KC_T)) //Same as redo
 
 /*Word*/
 #define FN_BOLD C(KC_B)
