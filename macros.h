@@ -214,21 +214,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-    case LT(0,KC_N):
+    case LT(0,KC_C):
     if (!record->tap.count && record->event.pressed) {
                 tap_code16(C(KC_C)); // Intercept hold function to send Ctrl-C
                 return false;
             }
 
-    case LT(0,KC_R):
+    case LT(0,KC_V):
             if (!record->tap.count && record->event.pressed) {
                 tap_code16(C(KC_V)); // Intercept hold function to send Ctrl-V
                 return false;
             }
 
-    case LT(0,KC_L):
+    case LT(0,KC_T):
             if (!record->tap.count && record->event.pressed) {
-                tap_code16(C(KC_T)); // Intercept hold function to send Ctrl-V
+                tap_code16(C(KC_T)); // Intercept hold function to send Ctrl-T
+                return false;
+            }
+
+    case LT(0,KC_X):
+            if (!record->tap.count && record->event.pressed) {
+                tap_code16(DE_ACUT);
                 return false;
             }
 

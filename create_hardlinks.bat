@@ -6,3 +6,4 @@ fsutil hardlink create %HOMEDRIVE%%HOMEPATH%\qmk_firmware\keyboards\%input%\keym
 fsutil hardlink create %HOMEDRIVE%%HOMEPATH%\qmk_firmware\keyboards\%input%\macros.h %HOMEDRIVE%%HOMEPATH%\qmk_firmware\users\%uspace%\macros.h
 fsutil hardlink create %HOMEDRIVE%%HOMEPATH%\qmk_firmware\keyboards\%input%\tapdances.h %HOMEDRIVE%%HOMEPATH%\qmk_firmware\users\%uspace%\tapdances.h
 fsutil hardlink create %HOMEDRIVE%%HOMEPATH%\qmk_firmware\keyboards\%input%\rules.mk %HOMEDRIVE%%HOMEPATH%\qmk_firmware\users\%uspace%\rules.mk
+fsutil hardlink create %HOMEDRIVE%%HOMEPATH%\qmk_firmware\keyboards\%input%\config.h %HOMEDRIVE%%HOMEPATH%\qmk_firmware\users\%uspace%\config.h
