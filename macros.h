@@ -214,29 +214,53 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-    case LT(0,KC_C):
-    if (!record->tap.count && record->event.pressed) {
+    case LT(0,KC_N):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_N);
+            } else if (record->event.pressed) {
                 tap_code16(C(KC_C)); // Intercept hold function to send Ctrl-C
-                return false;
             }
+            return false;
 
-    case LT(0,KC_V):
-            if (!record->tap.count && record->event.pressed) {
+    case LT(0,KC_R):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_R);
+            } else if (record->event.pressed) {
                 tap_code16(C(KC_V)); // Intercept hold function to send Ctrl-V
-                return false;
             }
+            return false;
 
-    case LT(0,KC_T):
-            if (!record->tap.count && record->event.pressed) {
+    case LT(0,KC_L):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_L);
+            } else if (record->event.pressed) {
                 tap_code16(C(KC_T)); // Intercept hold function to send Ctrl-T
-                return false;
             }
+            return false;
 
     case LT(0,KC_X):
-            if (!record->tap.count && record->event.pressed) {
-                tap_code16(DE_ACUT);
-                return false;
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_X);
+            } else if (record->event.pressed) {
+                tap_code16(DE_ACUT); // 
             }
+            return false;
+
+    case LT(0,KC_G):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_G);
+            } else if (record->event.pressed) {
+                tap_code16(KC_Q); // Intercept hold function to send Ctrl-C
+            }
+            return false;
+
+    case LT(1,S(KC_G)):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(S(KC_G));
+            } else if (record->event.pressed) {
+                tap_code16(S(KC_Q)); // Intercept hold function to send Ctrl-C
+            }
+            return false;
 
   }
   return true;

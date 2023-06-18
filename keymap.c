@@ -17,15 +17,15 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [DEF] = LAYOUT(
-    KC_J,             KC_D,        LT(0,KC_U),   LT(0,KC_A),     KC_X,                   KC_P,        KC_H,         LT(0,KC_L),  KC_M,        KC_W,
-    LT(STRG,KC_C),   LT(NUM,KC_T), LT(0,KC_I),   LT(0,KC_E),     LT(0,KC_O),            KC_B,        LT(0,KC_N),   LT(0,KC_R),  TD(ESZET),   KC_G,
+    KC_J,             KC_D,        LT(0,KC_U),   LT(0,KC_A),     LT(0,KC_X),            KC_P,        KC_H,         LT(0,KC_L),  KC_M,        KC_W,
+    LT(STRG,KC_C),   LT(NUM,KC_T), LT(0,KC_I),   LT(0,KC_E),     LT(0,KC_O),            KC_B,        LT(0,KC_N),   LT(0,KC_R),  TD(ESZET),   LT(0,KC_G),
     KC_F,             TD(VEXCL),   LT(0,DE_UDIA), TD(ADIAAT),    LT(0,DE_ODIA),      TD(YMINS),   DE_Z,         MO(SHIF),    TD(COMMQ),   TD(KQ),
                                           MO(NAV),        MO(SHIF),     KC_DOT,      KC_BSPC,     KC_SPC,      KC_ENT ),
 //IDEE: Hold c to copy, hold p to paste (statt combo) https://github.com/qmk/qmk_firmware/blob/master/docs/mod_tap.md
 
   [SHIF] = LAYOUT( 
     S(KC_J),         S(KC_D),      LT(1,S(KC_U)), LT(1,S(KC_A)), S(KC_X),                                     S(KC_P),      S(KC_H),      S(KC_L),      S(KC_M),      S(KC_W),
-    S(KC_C),         S(KC_T),      LT(1,S(KC_I)), LT(1,S(KC_E)), LT(1,S(KC_O)),                              S(KC_B),      S(KC_N),      S(KC_R),      S(KC_S),      S(KC_G),
+    S(KC_C),         S(KC_T),      LT(1,S(KC_I)), LT(1,S(KC_E)), LT(1,S(KC_O)),                              S(KC_B),      S(KC_N),      S(KC_R),      S(KC_S),      LT(1,S(KC_G)),
     S(KC_F),         S(KC_V),      LT(1,S(DE_UDIA)), S(DE_ADIA), LT(1,S(DE_ODIA)),          S(DE_Y),      S(DE_Z),      DE_UNDS,      DE_SEMI,      TD(SHIKQ),
                          TG(NUM),        DE_DQUO,         DE_COLN,     KC_BSPC,     KC_SPC,       S(KC_ENT) ),
 //vielleicht del wieder in BSPC ändern?
