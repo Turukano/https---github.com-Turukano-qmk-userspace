@@ -286,27 +286,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-    case LT(1,S(KC_S)):
+    case LT(1,C(KC_PGDN)): //fett
      if (record->tap.count && record->event.pressed) {
                 tap_code16(S(KC_S));
             } else if (record->event.pressed) {
-                tap_code16(C(S(KC_S)));
+                tap_code16(C(S(KC_F)));
             }
             return false;
 
-    case LT(1,S(KC_K)):
+    case LT(1,KC_NO): //kurisv
      if (record->tap.count && record->event.pressed) {
-                tap_code16(S(KC_K));
+                tap_code16(KC_NO);
             } else if (record->event.pressed) {
                 tap_code16(C(S(KC_K)));
             }
             return false;
 
-    case LT(1,DE_SEMI):
+    case LT(1,FN_FFXTAB): //underline
      if (record->tap.count && record->event.pressed) {
                 tap_code16(DE_SEMI);
             } else if (record->event.pressed) {
                 tap_code16(C(S(KC_U)));
+            }
+            return false;
+
+    case LT(1,KC_3):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_3);
+            } else if (record->event.pressed) {
+                tap_code16(DE_COMM);
             }
             return false;
 
