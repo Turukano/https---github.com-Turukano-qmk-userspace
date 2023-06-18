@@ -181,10 +181,10 @@
 #define FN_DOCKRIGHT LWIN(KC_RGHT) //
 
 /*Firefox*/
-#define FN_FFLEFT C(S(KC_TAB)) //auf A left
-#define FN_FFRIGHT C(KC_TAB) //auf A right
-#define FN_FFNTAB C(KC_T) // auf A up
-#define FN_FFXTAB C(KC_F4) //auf A down
+#define FN_FFLEFT C(S(KC_TAB)) //AutoHotKey #IfWinActive, Firefox Left::^+Tab
+#define FN_FFRIGHT C(KC_TAB) //AutHotKey #IfWinActive, Firefox Right::^Tab
+#define FN_FFNTAB C(KC_T) //alternative: Hold L
+#define FN_FFXTAB C(KC_F4) //
 #define FN_FFGOBACK A(KC_LEFT) //
 #define FN_FFGOFORTH A(KC_RGHT) //
 #define FN_FFRECOV C(S(KC_T)) //

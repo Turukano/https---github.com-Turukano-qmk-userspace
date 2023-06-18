@@ -242,7 +242,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
      if (record->tap.count && record->event.pressed) {
                 tap_code16(KC_X);
             } else if (record->event.pressed) {
-                tap_code16(DE_ACUT); // 
+                tap_code16(DE_QUOT); // 
             }
             return false;
 
@@ -266,7 +266,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 };
 
-
+/*uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SFT_T(KC_SPC):
+            return TAPPING_TERM - 100;
+        case LT(1, KC_GRV):
+            return 130;
+        default:
+            return TAPPING_TERM;
+    }
+}*/
 
 
 void matrix_scan_user(void) {

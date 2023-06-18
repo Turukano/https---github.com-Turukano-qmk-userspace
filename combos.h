@@ -62,7 +62,7 @@ const uint16_t PROGMEM escaping[] = {KC_J, KC_D, COMBO_END};
 const uint16_t PROGMEM nein[] = {KC_D,        LT(0,KC_U), COMBO_END};
 const uint16_t PROGMEM deleting[] = {KC_M, KC_W, COMBO_END};
 const uint16_t PROGMEM boot[] = {KC_F, KC_J, COMBO_END};
-const uint16_t PROGMEM tab[] = {LT(0,KC_R), TD(ESZET), KC_G, COMBO_END};
+const uint16_t PROGMEM tab[] = {LT(0,KC_R),  TD(ESZET),   LT(0,KC_G), COMBO_END};
 const uint16_t PROGMEM btab[] = {KC_B, LT(0,KC_N), LT(0,KC_R), COMBO_END};
 const uint16_t PROGMEM tab2[] = {KC_5, KC_6, KC_0, COMBO_END};
 const uint16_t PROGMEM btab2[] = {TD(STARPIPEPM), KC_4, KC_5, COMBO_END};
@@ -72,7 +72,7 @@ const uint16_t PROGMEM sellinef[] = {KC_DOWN, KC_RGHT, COMBO_END};
 const uint16_t PROGMEM numcombo[] = {LT(STRG,KC_C), MO(SHIF), COMBO_END};
 const uint16_t PROGMEM swap[] = {LT(0,KC_N),   LT(0,KC_R),  TD(ESZET), COMBO_END};
 const uint16_t PROGMEM ftwo[] = {KC_LSFT,      KC_LGUI, COMBO_END};
-const uint16_t PROGMEM apo[] = {LT(0,KC_A),     KC_X, COMBO_END};
+const uint16_t PROGMEM apo[] = {LT(0,KC_A),     LT(0,KC_X), COMBO_END};
 const uint16_t PROGMEM app[] = {KC_DOT, KC_BSPC, COMBO_END};
 const uint16_t PROGMEM selline[] = {KC_LEFT,      KC_DOWN,      KC_RGHT, COMBO_END};
 
