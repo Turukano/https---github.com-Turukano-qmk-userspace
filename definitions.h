@@ -190,9 +190,9 @@
 #define FN_FFRECOV C(S(KC_T)) //Same as redo
 
 /*Word*/
-#define FN_BOLD C(KC_B)
-#define FN_ITAL C(KC_I)
-#define FN_UNDER C(KC_U)
+#define FN_BOLD C(KC_B) //falsch
+#define FN_ITAL C(KC_I) //falsch
+#define FN_UNDER C(KC_U) //falsch
 #define FN_ALIGNL C(KC_L)
 #define FN_ALIGNC C(KC_E)
 #define FN_ALIGNR C(KC_R)

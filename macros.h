@@ -318,6 +318,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
+    case LT(0,KC_J):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_J);
+            } else if (record->event.pressed) {
+                tap_code16(QK_BOOT);
+            }
+            return false;
+
   }
   return true;
 };
