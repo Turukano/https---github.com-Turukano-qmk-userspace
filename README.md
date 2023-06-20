@@ -7,3 +7,11 @@ In case you don't know: the info.json can be found in the keyboard's root direct
 # What's not working
 
 What if I want to use a 34-keys keyboard? There will be extra-keys in my keymap and I would like to send them to the void, but I don't know how to tell my compiler to do that. I tried to add empty entries to the info.json, but that does not compile. I also tried to bake a converter in the config.h, but I'm too much of a noob to do that. Can anyone help me?
+
+# One Keymap for Many Boards
+1. create a folder in qmk_firmware/users/ with a name of your choice (or anywhere else really)
+2. clone my userspace there or create a keymap.c and all other necessary files yourself
+3. create a folder in qmk_firmware/keyboards/%yourkeyboard%/keymaps/
+4. hardlink all files from your userspace there. Use my bat file if you want. Any change to your userspace files now apply to all your keyboards
+5. if your keyboard also has 36 keys you are ready to compile
+6. otherwise edit the info.json which you can find in qmk_firmware/keyboards/%yourkeyboard%/. Add // before all keys which you would like to remain unused. You are now ready to compile
