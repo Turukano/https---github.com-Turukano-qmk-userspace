@@ -25,6 +25,7 @@ enum {
     PLUSIST,
     PERDEGTILD,
     SAVEAS,
+    SCRNSHT,
 };
 
 td_state_t cur_dance(tap_dance_state_t *state) {
@@ -150,6 +151,15 @@ void saveas(tap_dance_state_t *state, void *user_data) {
   reset_tap_dance (state); }
 }
 
+void scrnsht(tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {
+  SEND_STRING(SS_LG(SS_LSFT(SS_TAP(X_S))));
+  reset_tap_dance (state); }
+    else if (state->count == 2) {
+  SEND_STRING(SS_LG(SS_LSFT(SS_TAP(X_T)))); //requires PowerToys
+  reset_tap_dance (state); }
+}
+
 tap_dance_action_t tap_dance_actions[] = {
     [NAVNUM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, navnum, navnum_res),
     [STARPIPEPM] = ACTION_TAP_DANCE_FN(starpipepm),
@@ -160,4 +170,5 @@ tap_dance_action_t tap_dance_actions[] = {
     [PLUSIST] = ACTION_TAP_DANCE_FN(plusist),
     [PERDEGTILD] = ACTION_TAP_DANCE_FN(perdegtild),
     [SAVEAS] = ACTION_TAP_DANCE_FN(saveas),
+    [SCRNSHT] = ACTION_TAP_DANCE_FN(scrnsht),
 };
