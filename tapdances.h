@@ -153,10 +153,10 @@ void saveas(tap_dance_state_t *state, void *user_data) {
 
 void scrnsht(tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
-  SEND_STRING(SS_LG(SS_LSFT(SS_TAP(X_S))));
+  SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_S))));
   reset_tap_dance (state); }
     else if (state->count == 2) {
-  SEND_STRING(SS_LG(SS_LSFT(SS_TAP(X_T)))); //requires PowerToys
+  SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_T)))); //requires PowerToys
   reset_tap_dance (state); }
 }
 

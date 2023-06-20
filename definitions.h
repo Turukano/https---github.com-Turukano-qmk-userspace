@@ -185,7 +185,7 @@
 #define FN_FFRIGHT C(KC_TAB) //AutHotKey #IfWinActive, Firefox Right::^Tab
 #define FN_FFNTAB C(KC_T) //alternative: Hold L
 #define FN_FFXTAB C(KC_F4) //Same es undo
-#define FN_FFGOBACK KC_BSPC //BSPC Taste (Also Nav in VSCode)
+#define FN_FFGOBACK KC_BSPC //BSPC Taste (Also Nav in VSCode) Requires changes in Firefox about:config
 #define FN_FFGOFORTH S(KC_BSPC) //SPC Taste (Also Nav in VSCode)
 #define FN_FFRECOV C(S(KC_T)) //Same as redo
 

@@ -302,9 +302,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-    case LT(1,FN_FFXTAB): //underline
+    case LT(1,KC_F5): //underline
      if (record->tap.count && record->event.pressed) {
-                tap_code16(FN_FFXTAB);
+                tap_code16(KC_F5);
             } else if (record->event.pressed) {
                 tap_code16(C(S(KC_U)));
             }
@@ -325,6 +325,43 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(QK_BOOT);
             }
             return false;
+
+    case LT(1,KC_HOME):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_HOME);
+            } else if (record->event.pressed) {
+                tap_code16(KC_PGUP);
+            }
+            return false;
+
+    case LT(1,KC_END):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_END);
+            } else if (record->event.pressed) {
+                tap_code16(KC_PGDN);
+            }
+            return false;
+
+    case LT(1,FN_STREAM):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(FN_STREAM);
+            } else if (record->event.pressed) {
+                tap_code16(FN_PROJECT);
+            }
+            return false;
+
+    case LT(1,FN_FFXTAB):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(FN_FFXTAB);
+            } else if (record->event.pressed) {
+                tap_code16(FN_FFRECOV);
+            }
+            return false;
+
+
+
+
+
 
   }
   return true;

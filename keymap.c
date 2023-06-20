@@ -27,25 +27,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  TG(NUM), DE_DQUO, DE_COLN,                                             KC_BSPC, KC_SPC, S(KC_ENT) ),
 
 [NAV] = LAYOUT( 
- KC_BRID, KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE,                           KC_PGUP, KC_BSPC, KC_UP, KC_DEL, KC_INS,
- KC_LCTL, KC_LSFT, KC_LGUI, KC_LALT, _______,                           KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_F5,
- _______, _______, _______, FN_ZOOMOUT, FN_ZOOMIN,                      FN_FFRECOV, C(KC_PGUP), LT(1,FN_FFXTAB), LT(1,C(KC_PGDN)), LT(1,KC_NO),
- UNNAV, UNNAV, _______,                                                 FN_FFGOBACK, FN_FFGOFORTH, _______ ),
+ KC_BRID, KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE,                           LT(1,KC_HOME), FN_FFGOBACK, KC_UP, FN_FFGOFORTH, KC_DEL,
+ KC_LCTL, KC_LSFT, KC_LGUI, KC_LALT, _______,                           LT(1,KC_END), KC_LEFT, KC_DOWN, KC_RGHT, LT(1,KC_F5),
+ _______, _______, _______, FN_ZOOMOUT, FN_ZOOMIN,                      _______, C(KC_PGUP), LT(1,FN_FFXTAB), LT(1,C(KC_PGDN)), LT(1,KC_NO),
+ _______, _______, _______,                                             KC_BSPC, KC_SPC, KC_ENT ),
 
 [NUM] = LAYOUT( 
  _______, _______, _______, _______, _______,                           TD(PLUSIST), KC_7, KC_8, KC_9, TD(EURDOLLPARA),
- _______, KC_1, KC_2, KC_3, _______,                                    TD(STARPIPEPM), KC_4, KC_5, KC_6, KC_0,
+ _______, _______, _______, _______, _______,                           TD(STARPIPEPM), KC_4, KC_5, KC_6, KC_0,
  _______, _______, _______, _______, _______,                           DE_MINS, KC_1, KC_2, LT(1,KC_3), TD(PERDEGTILD),
- UNNUM, UNNUM, KC_DOT,                                                  KC_BSPC, KC_SPC, TD(ENTIST) ),
-//Zahlen überarbeiten. Erstens will ich besser ran kommen und zweitens will ich da noch mehr machen, als nur Zahlen. Dot und Klammern müssen verfügbar sein, aber auch Arrows eigentlich
+ _______, _______, KC_DOT,                                              KC_BSPC, KC_SPC, TD(ENTIST) ),
 
 [STRG] = LAYOUT( 
  LWIN(DE_Y), FN_DESKTOP, _______, FN_SEALL, FN_CUT,                     FN_PRINT, FN_NO, FN_LCKSCRN, FN_ROTATE, _______,
  _______, C(KC_T), FN_TXTSHT, FN_EXPL, _______,                         FN_BULLET, FN_NEW, FN_RUN, TD(SAVEAS), TD(SCRNSHT),
- FN_SEARCH, _______, _______, _______, _______,                         FN_REDO, FN_UNDO, _______, FN_STREAM, FN_PROJECT,
+ FN_SEARCH, _______, _______, _______, _______,                         FN_REDO, FN_UNDO, _______, _______, LT(1,FN_STREAM),
  _______, _______, _______,                                             C(KC_BSPC), _______, C(KC_ENTER) ),
-//word kursiv etc fehlen noch
 };
-
-
-//copypaste: über Combo? über hold? über tapdance? Und es gibt ja noch das INS auf der Nav ebene...
