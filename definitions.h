@@ -179,6 +179,7 @@
 #define FN_FULSCRN LWIN(KC_UP) //
 #define FN_DOCKLEFT LWIN(KC_LEFT) //
 #define FN_DOCKRIGHT LWIN(KC_RGHT) //
+#define FN_OSLSHIF OSL(SHIF)
 
 /*Firefox*/
 #define FN_FFLEFT C(S(KC_TAB)) //AutoHotKey #IfWinActive, Firefox Left::^+Tab
