@@ -18,3 +18,6 @@ What if I want to use a 34-keys keyboard? There will be extra-keys in my keymap 
 
 ![alt text](//imgur.com/a/7PZ0mwi)
 ![alt text](https://imgur.com/a/TC9lWM)
+
+<img width="30px" src="//imgur.com/a/7PZ0mwi" alt="image_name png" />
+<img width="30px" src="https://imgur.com/a/TC9lWM" alt="image_name png" />
