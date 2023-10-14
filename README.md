@@ -16,8 +16,13 @@ What if I want to use a 34-keys keyboard? There will be extra-keys in my keymap 
 5. if your keyboard also has 36 keys you are ready to compile
 6. otherwise edit the info.json which you can find in qmk_firmware/keyboards/%yourkeyboard%/. Add // before all keys which you would like to remain unused. You are now ready to compile
 
-![Image](//imgur.com/a/7PZ0mwi)
+![Image](https://i.imgur.com/QGWgIhG.jpeg)
 ![Image]("https://imgur.com/a/TC9lWM")
 
 <img width="30px" src="//imgur.com/a/7PZ0mwi" alt="image_name png" />
 <img width="30px" src="https://imgur.com/a/TC9lWM" alt="image_name png" />
+<<<<<<< HEAD
+=======
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/TC9lWMd" data-context="false" ><a href="//imgur.com/a/TC9lWMd"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+>>>>>>> 7699ff90d083ded1a89c585fe9deacffe4eeae17
