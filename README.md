@@ -17,7 +17,7 @@ What if I want to use a 34-keys keyboard? There will be extra-keys in my keymap 
 6. otherwise edit the info.json which you can find in qmk_firmware/keyboards/%yourkeyboard%/. Add // before all keys which you would like to remain unused. You are now ready to compile
 
 ![Image](//imgur.com/a/7PZ0mwi "")
-![Image](https://imgur.com/a/TC9lWM "")
+![Image](https://imgur.com/TC9lWM "")
 
 <img width="30px" src="//imgur.com/a/7PZ0mwi" alt="image_name png" />
 <img width="30px" src="https://imgur.com/a/TC9lWM" alt="image_name png" />
