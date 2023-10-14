@@ -8,6 +8,7 @@ enum custom_keycodes {
     ALT_BTAB,
     SW_AP,
     SEL_LINE,
+    FN_COLN,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -68,6 +69,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         tap_code(KC_END);
         unregister_code(KC_LSFT);
       } return false;
+    
+/*    case MAC_DQUO:
+      if (record->event.pressed) {
+        tap_code(DE_DQUO);
+        set_oneshot_layer(LAYER, ONESHOT_START);
+      } return false;....................................................*/
 
     case LT(0,KC_A):
       if (!record->tap.count && record->event.pressed) {
@@ -254,6 +261,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
+    case LT(0,KC_H):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_H);
+            } else if (record->event.pressed) {
+                tap_code16(S(KC_TAB));
+            }
+            return false;
+
+    case LT(0,KC_M):
+     if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_M);
+            } else if (record->event.pressed) {
+                tap_code16(KC_TAB);
+            }
+            return false;
+
     case LT(1,S(KC_G)):
      if (record->tap.count && record->event.pressed) {
                 tap_code16(S(KC_G));
@@ -328,17 +351,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     case LT(1,KC_HOME):
      if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_HOME);
-            } else if (record->event.pressed) {
                 tap_code16(KC_PGUP);
+            } else if (record->event.pressed) {
+                tap_code16(KC_HOME);
             }
             return false;
 
     case LT(1,KC_END):
      if (record->tap.count && record->event.pressed) {
-                tap_code16(KC_END);
-            } else if (record->event.pressed) {
                 tap_code16(KC_PGDN);
+            } else if (record->event.pressed) {
+                tap_code16(KC_END);
             }
             return false;
 
@@ -358,26 +381,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-
-
+    case FN_COLN:
+     if (record->event.pressed) {
+                tap_code16(DE_COLN);
+                tap_code16(KC_SPACE);
+                set_oneshot_layer(SHIF, ONESHOT_START);
+            } 
+            return false;
 
 
 
   }
   return true;
 };
-
-/*uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case SFT_T(KC_SPC):
-            return TAPPING_TERM - 100;
-        case LT(1, KC_GRV):
-            return 130;
-        default:
-            return TAPPING_TERM;
-    }
-}*/
-
 
 void matrix_scan_user(void) {
   if (is_alt_tab_active) {
