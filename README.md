@@ -16,20 +16,22 @@ What if I want to use a 34-keys keyboard? There will be extra-keys in my keymap 
 5. if your keyboard also has 36 keys you are ready to compile
 6. otherwise edit the info.json which you can find in qmk_firmware/keyboards/%yourkeyboard%/. Add // before all keys which you would like to remain unused. You are now ready to compile
 
-# Dactyl Manuform
+# Dactolli
 ![Image](https://i.imgur.com/QGWgIhG.jpeg)
 
-# Atreus
+# Atrolli
 ![Image](https://i.imgur.com/X6DzT9J.jpeg)
 
-# Air40
+# Ymdkolli
 ![ZyPHFDM](https://github.com/Turukano/qmk-userspace/assets/9859835/7549253d-0363-48dc-b61d-5a96c31f14df)
 
 
-# Corne
+# Cornolli
 
 # Kyria??
 
 # CSTC40
 
-# Contra
+# Controlli
+![photo_2023-10-20_14-16-28](https://github.com/Turukano/qmk-userspace/assets/9859835/acd8e52e-d856-447d-bffb-5a87b3f08657)
+
