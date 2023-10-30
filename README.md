@@ -26,6 +26,22 @@ What if I want to use a 34-keys keyboard? There will be extra-keys in my keymap 
 
 
 
+# Dactolli
 ![Image](https://i.imgur.com/QGWgIhG.jpeg)
+
+# Atrolli
 ![Image](https://i.imgur.com/X6DzT9J.jpeg)
+
+# Ymdkolli
+![ZyPHFDM](https://github.com/Turukano/qmk-userspace/assets/9859835/7549253d-0363-48dc-b61d-5a96c31f14df)
+
+
+# Cornolli
+
+# Kyria??
+
+# CSTC40
+
+# Controlli
+![photo_2023-10-20_14-16-28](https://github.com/Turukano/qmk-userspace/assets/9859835/acd8e52e-d856-447d-bffb-5a87b3f08657)
 
